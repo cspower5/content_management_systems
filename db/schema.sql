@@ -9,23 +9,23 @@ create table department(
     names varchar(30) NOT NULL
     );
 
-    create table roles(
+create table roles(
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title varchar(30) NOT NULL,
-    salary decimal(10,2),
+    salary decimal(10,2) DEFAULT 0.00,
     department_id INTEGER,
-    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
+    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON UPDATE CASCADE ON DELETE CASCADE
     );
 
 create table employee(
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
-    role_id INTEGER NOT NULL,
+    role_id INTEGER NULL,
     manager_id INTEGER,
-    CONSTRAINT fk_roles FOREIGN KEY (role_id) REFERENCES roles(id),
-    CONSTRAINT fk_employee FOREIGN KEY (manager_id) REFERENCES employee(id)
+    CONSTRAINT fk_roles FOREIGN KEY (role_id) REFERENCES roles(id) ON UPDATE CASCADE ON DELETE SET NULL,
+    CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id)
     );
 
-    
+
 
