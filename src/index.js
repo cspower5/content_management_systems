@@ -94,7 +94,7 @@ async function addRole(){
     const sql_departments = `select id, names from department`;
     dbconnect.query(sql_departments, (err, rows) => {
         if(err) throw err;
-        departments = object.values(rows);
+        departments = Object.keys(rows).map((key) => [id(key), rows[key]]);
         console.log(departments);
         inquirer.prompt([
             {
