@@ -22,7 +22,7 @@ create table employee(
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
     role_id INTEGER NULL,
-    manager_id INTEGER,
+    manager_id INTEGER DEFAULT NULL,
     CONSTRAINT fk_roles FOREIGN KEY (role_id) REFERENCES roles(id) ON UPDATE CASCADE ON DELETE SET NULL,
     CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id)
     );
