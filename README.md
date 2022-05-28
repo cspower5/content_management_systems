@@ -73,11 +73,14 @@ chris.borer@gmail.com
 ## Issues
   contact contributors
 ## Links
-    screen shot
+    screen shot video
+    https://drive.google.com/file/d/1rgT9XslKckIsbHJ-J20H1Nqlwulo_UTl/view
     
     Heroku link
     
     git hub
+    clicking [GitHub Repo](https://github.com/cspower5/content_management_systems)
+    https://cspower5.github.io/content_management_systems/
     
 
 
