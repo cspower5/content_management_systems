@@ -14,6 +14,7 @@ create table roles(
     title varchar(30) NOT NULL,
     salary decimal(10,2) DEFAULT 0.00,
     department_id INTEGER,
+    is_manager BOOLEAN DEFAULT 0,
     CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON UPDATE CASCADE ON DELETE CASCADE
     );
 

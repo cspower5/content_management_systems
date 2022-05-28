@@ -30,7 +30,9 @@ F. If I choose Add Role I am prompted to choose the department then enter the na
 
 G. If I choose to add an employee I am prompted to choose the role, then enter the employee’s first name, last name, and manager id then employee is added to    the database
 
-H. If I choose to update an employee role I am prompted to choose an employee and their new role and this information is updated in the database
+H. If I choose to update an employee role I am prompted to choose an employee and their new role.  It then call the update manager function and allows the user to pick the the new manager, and this information is updated in the database
+
+I. If I choose to update an employee manager the employee I'm prompted to choose the employee and then the new manager and this information is updated in the database. 
 
 
 # Table of Content
